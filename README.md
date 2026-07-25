@@ -12,10 +12,10 @@ The API returns both a grounded answer and the files/chunks retrieved for it. Re
 
 1. Create a Supabase project. In **SQL Editor**, run [supabase/schema.sql](supabase/schema.sql). This creates the `resume_chunks` table, an HNSW vector index, and the `match_resume_chunks` search function.
 
-2. Create a Gemini API key in Google AI Studio. Copy environment values:
+2. Create a Gemini API key in Google AI Studio. Copy environment values (optional):
 
    ```bash
-   cp .env.example .env
+   cp .env .env
    ```
 
    Fill in `GEMINI_API_KEY`, `SUPABASE_URL`, and `SUPABASE_SERVICE_ROLE_KEY`. Get the **Project URL** (for example, `https://PROJECT_REF.supabase.co`, without `/rest/v1`) and **service_role** key from Project Settings → API. Keep this key only in `.env` or your deployment secrets—never a frontend.
