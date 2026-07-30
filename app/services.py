@@ -83,11 +83,10 @@ class ResumeRAG:
             f"[Resume: {m.source_file}; chunk {m.chunk_index}; relevance {m.similarity:.3f}]\n{m.content}"
             for m in matches
         )
-        prompt = f"""You are a precise career-assistant. Compare the job description with ONLY the
-resume evidence below. Return: (1) strongest matching experience/skills as concise bullets,
-(2) gaps or claims that are not supported by the resumes, and (3) a short tailored summary.
-Never invent experience, numbers, employers, dates, or credentials. Cite each claim using
-[resume filename].
+        prompt = f"""You are a precise career-assistant. Compare the job description with ONLY the resume evidence below. 
+        Return: (1) strongest matching experience/skills as concise bullets, 
+        (2) gaps or claims that are not supported by the resumes, and 
+        (3) a short tailored summary. Never invent experience, numbers, employers, dates, or credentials. Cite each claim using [resume filename].
 
 JOB DESCRIPTION:
 {job_description}
